@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backlog Usability Enhance - 設定</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        margin: 0 0 10px 0;
+        color: #333;
+      }
+
+      .header p {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .section {
+        background: white;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        background: #f8f9fa;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .section-content {
+        padding: 20px;
+      }
+
+      .setting-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .setting-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .setting-info {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .setting-title {
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .setting-description {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      .setting-control {
+        flex-shrink: 0;
+      }
+
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 26px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #4caf50;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(24px);
+      }
+
+      .sub-setting {
+        margin-left: 20px;
+        margin-top: 10px;
+        padding-left: 20px;
+        border-left: 2px solid #eee;
+      }
+
+      .status {
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: none;
+      }
+
+      .status.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .status.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      .actions {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 0 5px;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+
+      .btn.secondary {
+        background: #6c757d;
+      }
+
+      .btn.secondary:hover {
+        background: #545b62;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Backlog Usability Enhance</h1>
+      <p>Backlogの使いやすさを向上させる機能の設定</p>
+    </div>
+
+    <!-- ボードアコーディオン機能 -->
+    <div class="section">
+      <div class="section-header">
+        <h2>📋 ボードアコーディオン機能</h2>
+      </div>
+      <div class="section-content">
+        <div class="setting-item">
+          <div class="setting-info">
+            <div class="setting-title">
+              ボードアコーディオン機能を有効にする
+            </div>
+            <div class="setting-description">
+              ボード画面でステータス列を個別に折りたたみ/展開できるようになります。<br />
+              状態はページリロード後も保持されます。<br />
+              <strong>キーボードショートカット:</strong> Ctrl+Shift+E（全列展開）、Ctrl+Shift+C（全列折りたたみ）
+            </div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="boardAccordionEnabled" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ショートカットキー表示機能 -->
+    <div class="section">
+      <div class="section-header">
+        <h2>⌨️ ショートカットキー表示機能</h2>
+      </div>
+      <div class="section-content">
+        <div class="setting-item">
+          <div class="setting-info">
+            <div class="setting-title">ショートカットキー表示を有効にする</div>
+            <div class="setting-description">
+              Backlog標準のショートカットキーをナビゲーション項目に表示します。<br />
+              キーバッジとツールチップで使い方が分かりやすくなります。
+            </div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="shortcutKeysEnabled" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題Pending機能 -->
+    <div class="section">
+      <div class="section-header">
+        <h2>⏸️ 課題Pending機能</h2>
+      </div>
+      <div class="section-content">
+        <div class="setting-item">
+          <div class="setting-info">
+            <div class="setting-title">課題Pending機能を有効にする</div>
+            <div class="setting-description">
+              ボード上で課題を独自にPending（保留）状態に設定できます。<br />
+              視覚的な表示と自動解除機能で作業管理が効率化されます。
+            </div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="issuePendingEnabled" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-item sub-setting">
+          <div class="setting-info">
+            <div class="setting-title">完了課題の自動Pending解除</div>
+            <div class="setting-description">
+              課題が「完了」列（data-statusid="4"）にある際に、自動的にPending状態を解除します。<br />
+            </div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="issuePendingAutoResolve" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="resetButton" class="btn secondary">デフォルトに戻す</button>
+    </div>
+
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>

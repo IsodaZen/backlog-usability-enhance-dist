@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Backlog Usability Enhance",
+  "version": "1.0.0",
+  "description": "BacklogのWebインターフェースの使いやすさを向上させる統合Chrome拡張機能",
+
+  "permissions": ["storage", "activeTab"],
+
+  "host_permissions": ["https://*.backlog.jp/*", "https://*.backlog.com/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.backlog.jp/*", "https://*.backlog.com/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+
+  "background": {
+    "service_worker": "background/background.js"
+  },
+
+  "options_page": "options/options.html",
+
+  "action": {
+    "default_title": "Backlog Usability Enhance - 設定",
+    "default_popup": "popup/popup.html"
+  },
+
+  "web_accessible_resources": [
+    {
+      "matches": ["https://*.backlog.jp/*", "https://*.backlog.com/*"],
+      "resources": ["assets/*"]
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backlog Usability Enhance</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-container">
+      <!-- ヘッダー -->
+      <div class="header">
+        <h1>Backlog Usability Enhance</h1>
+        <p>各機能の概要は詳細設定で確認してください。</p>
+      </div>
+
+      <!-- 設定リスト -->
+      <div class="settings-list">
+        <!-- ボードアコーディオン機能 -->
+        <div class="setting-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-title">
+                <span class="setting-icon">📋</span>
+                ボードアコーディオン機能
+              </div>
+            </div>
+            <div class="setting-control">
+              <label
+                class="toggle"
+                aria-label="ボードアコーディオン機能の有効/無効"
+              >
+                <input type="checkbox" id="boardAccordionEnabled" />
+                <span class="slider" role="switch" aria-checked="false"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ショートカットキー表示機能 -->
+        <div class="setting-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-title">
+                <span class="setting-icon">⌨️</span>
+                ショートカットキー表示
+              </div>
+            </div>
+            <div class="setting-control">
+              <label
+                class="toggle"
+                aria-label="ショートカットキー表示機能の有効/無効"
+              >
+                <input type="checkbox" id="shortcutKeysEnabled" />
+                <span class="slider" role="switch" aria-checked="false"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 課題Pending機能 -->
+        <div class="setting-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-title">
+                <span class="setting-icon">⏸️</span>
+                課題Pending機能
+              </div>
+            </div>
+            <div class="setting-control">
+              <label class="toggle" aria-label="課題Pending機能の有効/無効">
+                <input type="checkbox" id="issuePendingEnabled" />
+                <span class="slider" role="switch" aria-checked="false"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- サブ設定 -->
+          <div class="sub-setting" id="issuePendingSubSettings">
+            <div class="setting-item">
+              <div class="setting-info">
+                <div class="setting-title">完了課題の自動解除</div>
+              </div>
+              <div class="setting-control">
+                <label
+                  class="toggle"
+                  aria-label="完了課題の自動Pending解除の有効/無効"
+                >
+                  <input type="checkbox" id="issuePendingAutoResolve" />
+                  <span
+                    class="slider"
+                    role="switch"
+                    aria-checked="false"
+                  ></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- フッター -->
+      <div class="footer">
+        <button id="openOptionsButton" class="btn btn-secondary" type="button">
+          詳細設定を開く
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
