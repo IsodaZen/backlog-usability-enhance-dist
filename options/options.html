@@ -5,66 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Backlog Usability Enhance - 設定</title>
     <style>
+      /* デザインシステム変数をインライン定義 */
+      :root {
+        --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --text-primary: #333;
+        --text-secondary: #666;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8f9fa;
+        --bg-tertiary: #f5f5f5;
+        --border-color: #e9ecef;
+        --border-radius: 4px;
+        --border-radius-lg: 8px;
+        --spacing-md: 8px;
+        --spacing-lg: 12px;
+        --spacing-xl: 16px;
+        --spacing-xxl: 24px;
+        --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        --primary-color: #007bff;
+        --primary-hover: #0056b3;
+        --secondary-color: #6c757d;
+        --secondary-hover: #545b62;
+        --success-color: #28a745;
+        --transition-base: 0.2s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-primary: #e4e4e7;
+          --text-secondary: #a1a1aa;
+          --bg-primary: #2a2a2a;
+          --bg-secondary: #1a1a1a;
+          --bg-tertiary: #404040;
+          --border-color: #404040;
+          --primary-color: #60a5fa;
+          --primary-hover: #3b82f6;
+        }
+      }
+
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: var(--font-family);
         max-width: 600px;
         margin: 0 auto;
-        padding: 20px;
-        background-color: #f5f5f5;
+        padding: var(--spacing-xxl);
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
       }
 
       .header {
         text-align: center;
         margin-bottom: 30px;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: var(--bg-primary);
+        padding: var(--spacing-xxl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow);
       }
 
       .header h1 {
-        margin: 0 0 10px 0;
-        color: #333;
+        margin: 0 0 var(--spacing-lg) 0;
+        color: var(--text-primary);
       }
 
       .header p {
         margin: 0;
-        color: #666;
+        color: var(--text-secondary);
         font-size: 14px;
       }
 
       .section {
-        background: white;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: var(--bg-primary);
+        margin-bottom: var(--spacing-xxl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow);
       }
 
       .section-header {
-        padding: 15px 20px;
-        border-bottom: 1px solid #eee;
-        background: #f8f9fa;
-        border-radius: 8px 8px 0 0;
+        padding: var(--spacing-xl) var(--spacing-xxl);
+        border-bottom: 1px solid var(--border-color);
+        background: var(--bg-secondary);
+        border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
       }
 
       .section-header h2 {
         margin: 0;
         font-size: 16px;
-        color: #333;
+        color: var(--text-primary);
       }
 
       .section-content {
-        padding: 20px;
+        padding: var(--spacing-xxl);
       }
 
       .setting-item {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+        border-bottom: 1px solid var(--border-color);
       }
 
       .setting-item:last-child {
@@ -75,18 +112,18 @@
 
       .setting-info {
         flex: 1;
-        margin-right: 20px;
+        margin-right: var(--spacing-xxl);
       }
 
       .setting-title {
         font-weight: 500;
-        margin-bottom: 5px;
-        color: #333;
+        margin-bottom: var(--spacing-sm);
+        color: var(--text-primary);
       }
 
       .setting-description {
         font-size: 13px;
-        color: #666;
+        color: var(--text-secondary);
         line-height: 1.4;
       }
 
@@ -114,8 +151,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
-        transition: 0.4s;
+        background-color: var(--border-color);
+        transition: var(--transition-base);
         border-radius: 26px;
       }
 
@@ -126,24 +163,28 @@
         width: 20px;
         left: 3px;
         bottom: 3px;
-        background-color: white;
-        transition: 0.4s;
+        background-color: var(--bg-primary);
+        transition: var(--transition-base);
         border-radius: 50%;
       }
 
       input:checked + .slider {
-        background-color: #4caf50;
+        background-color: var(--success-color);
       }
 
       input:checked + .slider:before {
         transform: translateX(24px);
       }
 
+      input:focus + .slider {
+        box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.3);
+      }
+
       .sub-setting {
-        margin-left: 20px;
-        margin-top: 10px;
-        padding-left: 20px;
-        border-left: 2px solid #eee;
+        margin-left: var(--spacing-xxl);
+        margin-top: var(--spacing-lg);
+        padding-left: var(--spacing-xxl);
+        border-left: 2px solid var(--border-color);
       }
 
       .status {
@@ -173,26 +214,32 @@
       }
 
       .btn {
-        background: #007bff;
+        background: var(--primary-color);
         color: white;
         border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
+        padding: var(--spacing-lg) var(--spacing-xxl);
+        border-radius: var(--border-radius);
         cursor: pointer;
         font-size: 14px;
-        margin: 0 5px;
+        margin: 0 var(--spacing-sm);
+        transition: var(--transition-base);
       }
 
       .btn:hover {
-        background: #0056b3;
+        background: var(--primary-hover);
+      }
+
+      .btn:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
       }
 
       .btn.secondary {
-        background: #6c757d;
+        background: var(--secondary-color);
       }
 
       .btn.secondary:hover {
-        background: #545b62;
+        background: var(--secondary-hover);
       }
     </style>
   </head>
