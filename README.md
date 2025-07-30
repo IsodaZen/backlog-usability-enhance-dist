@@ -2,100 +2,119 @@
 
 BacklogのWebインターフェースの使いやすさを向上させるChrome拡張機能です。
 
-## 💻 対応サイト
+A Chrome extension that enhances the usability of Backlog web interface.
+
+## 💻 対応サイト / Supported Sites
 
 - `https://*.backlog.jp/*`
 - `https://*.backlog.com/*`
 
-## 📥 インストール方法
+## 📥 インストール方法 / Installation
 
-1. **ファイルをダウンロード**
-   - [リリースページ](https://github.com/IsodaZen/backlog-usability-enhance-dist/releases)から最新版をダウンロード
-   - ZIPファイルを解凍
+1. **ファイルをダウンロード / Download Files**
+   - [リリースページ](https://github.com/IsodaZen/backlog-usability-enhance-dist/releases)から最新版をダウンロード / Download the latest version from the releases page
+   - ZIPファイルを解凍 / Extract the ZIP file
 
-2. **Chrome拡張機能として読み込み**
-   - Chromeブラウザで `chrome://extensions/` を開く
-   - 右上の「デベロッパーモード」をオンにする
-   - 「パッケージ化されていない拡張機能を読み込む」をクリック
-   - 解凍したフォルダを選択
+2. **Chrome拡張機能として読み込み / Load as Chrome Extension**
+   - Chromeブラウザで `chrome://extensions/` を開く / Open `chrome://extensions/` in Chrome browser
+   - 右上の「デベロッパーモード」をオンにする / Turn on "Developer mode" in the top right
+   - 「パッケージ化されていない拡張機能を読み込む」をクリック / Click "Load unpacked"
+   - 解凍したフォルダを選択 / Select the extracted folder
 
-3. **設定**
-   - 拡張機能一覧で「Backlog Usability Enhance」の「詳細」をクリック
-   - 「拡張機能のオプション」から各機能の有効/無効を設定
+3. **設定 / Settings**
+   - 拡張機能一覧で「Backlog Usability Enhance」の「詳細」をクリック / Click "Details" for "Backlog Usability Enhance" in the extensions list
+   - 「拡張機能のオプション」から各機能の有効/無効を設定 / Configure each feature on/off in "Extension options"
 
 または、拡張機能アイコンをクリックしてポップアップから設定も可能です。
 
-## 🚀 機能と使用方法
+Alternatively, you can access settings by clicking the extension icon in the popup.
 
-### 📋 ボードアコーディオン機能
+## 🚀 機能と使用方法 / Features & Usage
+
+### 📋 ボードアコーディオン機能 / Board Accordion Feature
 **概要：** ステータス列の個別折りたたみ/展開で、作業中の列だけに集中できます
 
-**使い方：**
-- ステータス列のヘッダーをクリックして折りたたみ/展開
-- キーボードショートカット：
-  - `Ctrl+Shift+E`: 全列展開
-  - `Ctrl+Shift+C`: 全列折りたたみ
-- 状態はページリロード後も保持されます
+**Overview:** Individual collapse/expand of status columns to focus only on working columns
 
-### ⌨️ ショートカットキー表示機能
+**使い方 / Usage:**
+- ステータス列のヘッダーをクリックして折りたたみ/展開 / Click status column headers to collapse/expand
+- キーボードショートカット / Keyboard shortcuts：
+  - `Ctrl+Shift+E`: 全列展開 / Expand all columns
+  - `Ctrl+Shift+C`: 全列折りたたみ / Collapse all columns
+- 状態はページリロード後も保持されます / States are preserved after page reload
+
+### ⌨️ ショートカットキー表示機能 / Shortcut Key Display Feature
 **概要：** Backlog標準ショートカットキーが視覚的に表示され、キーボード操作が効率化されます
 
-**使い方：**
-- Backlog画面でナビゲーション項目にショートカットキーが自動表示
-- ツールチップでキーの説明も確認可能
-- 設定画面で表示/非表示を切り替え
+**Overview:** Backlog standard shortcut keys are visually displayed to improve keyboard operation efficiency
 
-### ⏸️ 課題Pending機能
+**使い方 / Usage:**
+- Backlog画面でナビゲーション項目にショートカットキーが自動表示 / Shortcut keys automatically displayed on navigation items in Backlog
+- ツールチップでキーの説明も確認可能 / Key descriptions available via tooltips
+- 設定画面で表示/非表示を切り替え / Toggle display on/off in settings
+
+### ⏸️ 課題Pending機能 / Issue Pending Feature
 **概要：** ボード上で課題を一時保留状態にして、優先度の管理ができます
 
-**使い方：**
-- 課題カードをクリックしてPending状態を切り替え
-- Pending状態の課題は色分け・アイコンで視覚的に区別
-- 完了した課題のPending状態は自動解除（設定で変更可能）
+**Overview:** Temporarily hold issues on the board for priority management
 
-## 🐛 問題の報告
+**使い方 / Usage:**
+- 課題カードをクリックしてPending状態を切り替え / Click issue cards to toggle Pending state
+- Pending状態の課題は色分け・アイコンで視覚的に区別 / Pending issues are visually distinguished with colors and icons
+- 完了した課題のPending状態は自動解除（設定で変更可能） / Completed issues automatically clear Pending state (configurable)
+
+## 🐛 問題の報告 / Bug Reports
 
 バグや改善要望がございましたら、以下の方法でお知らせください：
 
-1. **GitHub Issues**（推奨）
-   - [Issues ページ](https://github.com/IsodaZen/backlog-usability-enhance-dist/issues)で新しいIssueを作成
-   - 問題の詳細、再現手順、環境情報を記載
+Please report bugs or feature requests using the following methods:
 
-2. **問題報告時に含めてほしい情報**
-   - Chrome のバージョン
-   - 拡張機能のバージョン
-   - 問題が発生したBacklogのURL（プライベート情報は除く）
-   - 問題の詳細な説明と再現手順
-   - エラーメッセージ（あれば）
+1. **GitHub Issues**（推奨 / Recommended）
+   - [Issues ページ](https://github.com/IsodaZen/backlog-usability-enhance-dist/issues)で新しいIssueを作成 / Create a new issue on the Issues page
+   - 問題の詳細、再現手順、環境情報を記載 / Include problem details, reproduction steps, and environment information
 
-## ❓ よくある質問
+2. **問題報告時に含めてほしい情報 / Information to Include in Bug Reports**
+   - Chrome のバージョン / Chrome version
+   - 拡張機能のバージョン / Extension version
+   - 問題が発生したBacklogのURL（プライベート情報は除く） / Backlog URL where the issue occurred (excluding private information)
+   - 問題の詳細な説明と再現手順 / Detailed description and reproduction steps
+   - エラーメッセージ（あれば） / Error messages (if any)
 
-**Q: 拡張機能が動作しません**
-A: 以下をご確認ください：
-- 対応サイト（*.backlog.jp, *.backlog.com）でアクセスしているか
-- 拡張機能が有効になっているか
-- ページを再読み込みしてみてください
+## ❓ よくある質問 / FAQ
 
-**Q: 設定が保存されません**
+**Q: 拡張機能が動作しません / Extension is not working**
+
+A: 以下をご確認ください / Please check the following:
+- 対応サイト（*.backlog.jp, *.backlog.com）でアクセスしているか / Are you accessing supported sites (*.backlog.jp, *.backlog.com)?
+- 拡張機能が有効になっているか / Is the extension enabled?
+- ページを再読み込みしてみてください / Try reloading the page
+
+**Q: 設定が保存されません / Settings are not saved**
+
 A: Chromeの同期設定がオンになっていることを確認し、拡張機能の権限で「ストレージ」が許可されていることをご確認ください。
 
-**Q: キーボードショートカットが効きません**
+Please ensure Chrome sync is enabled and that the extension has "Storage" permission.
+
+**Q: キーボードショートカットが効きません / Keyboard shortcuts don't work**
+
 A: 他の拡張機能やWebページのショートカットと競合している可能性があります。設定画面でショートカットキー機能を一度無効→有効にしてみてください。
 
-## 🔒 プライバシー・セキュリティ
+There may be conflicts with other extensions or webpage shortcuts. Try disabling and re-enabling the shortcut key feature in settings.
 
-- この拡張機能はBacklogページ上でのみ動作します
-- 設定情報はChromeの同期ストレージに保存されます
-- 外部サーバーにデータを送信することはありません
-- 個人情報や課題内容を収集することはありません
+## 🔒 プライバシー・セキュリティ / Privacy & Security
 
-## ⚠️ 免責事項
+- この拡張機能はBacklogページ上でのみ動作します / This extension operates only on Backlog pages
+- 設定情報はChromeの同期ストレージに保存されます / Settings are stored in Chrome sync storage
+- 外部サーバーにデータを送信することはありません / No data is sent to external servers
+- 個人情報や課題内容を収集することはありません / No personal information or issue content is collected
 
-- この拡張機能は非公式のツールです
-- Backlogの仕様変更により動作しなくなる可能性があります
-- 使用は自己責任でお願いします
-- 重要な作業の前には動作確認を行ってください
+## ⚠️ 免責事項 / Disclaimer
 
-## 📄 ライセンス
+- この拡張機能は非公式のツールです / This extension is an unofficial tool
+- Backlogの仕様変更により動作しなくなる可能性があります / May stop working due to Backlog specification changes
+- 使用は自己責任でお願いします / Use at your own risk
+- 重要な作業の前には動作確認を行ってください / Please test functionality before important work
+
+## 📄 ライセンス / License
 
 MIT License
