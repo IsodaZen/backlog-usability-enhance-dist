@@ -63,6 +63,15 @@ Alternatively, you can access settings by clicking the extension icon in the pop
 - Pending状態の課題は色分け・アイコンで視覚的に区別 / Pending issues are visually distinguished with colors and icons
 - 完了した課題のPending状態は自動解除（設定で変更可能） / Completed issues automatically clear Pending state (configurable)
 
+### 📝 プルリクエストフォーマット自動挿入機能 / PR Format Auto-Insert Feature
+**概要：** プルリクエスト作成時にプロジェクト別のテンプレートを自動挿入して、統一されたフォーマットで効率的に作成できます
+
+**Overview:** Automatically insert project-specific templates when creating pull requests for efficient and consistent formatting
+
+**使い方 / Usage:**
+- 設定画面でプロジェクト別テンプレートを編集・管理 / Edit and manage project-specific templates in settings
+- プルリクエスト作成画面でプロジェクト別テンプレートを自動挿入 / Automatically insert project-specific templates on pull request creation pages
+
 ## 🐛 問題の報告 / Bug Reports
 
 バグや改善要望がございましたら、以下の方法でお知らせください：
