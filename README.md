@@ -1,6 +1,6 @@
 # Backlog Usability Enhance
 
-BacklogのWebインターフェースの使いやすさを向上させるChrome拡張機能です。
+BacklogのWebインターフェースの使いやすくするChrome拡張機能です。
 
 A Chrome extension that enhances the usability of Backlog web interface.
 
@@ -71,6 +71,17 @@ Alternatively, you can access settings by clicking the extension icon in the pop
 **使い方 / Usage:**
 - 設定画面でプロジェクト別テンプレートを編集・管理 / Edit and manage project-specific templates in settings
 - プルリクエスト作成画面でプロジェクト別テンプレートを自動挿入 / Automatically insert project-specific templates on pull request creation pages
+
+### 🔗 課題コメントURLコピー機能 / Issue Comment URL Copy Feature
+**概要：** 課題やプルリクエストの各コメントにURLコピーボタンを追加し、ワンクリックでコメントの直リンクをクリップボードにコピーできます
+
+**Overview:** Add URL copy buttons to each comment on issues and pull requests, allowing you to copy direct links to comments with one click
+
+**使い方 / Usage:**
+- 課題詳細ページやプルリクエストページの各コメントにコピーボタンが表示 / Copy buttons appear on each comment in issue detail and pull request pages
+- ボタンをクリックするとコメントの直リンクURLがクリップボードにコピー / Click the button to copy the direct link URL to the clipboard
+- iframe内モーダル（`dialogMode=true`）でも利用可能 / Also available in iframe modals (`dialogMode=true`)
+- MutationObserverにより新規コメントを自動検知 / Automatically detects new comments via MutationObserver
 
 ## 🐛 問題の報告 / Bug Reports
 

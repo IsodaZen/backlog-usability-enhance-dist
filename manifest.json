@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Backlog Usability Enhance",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "BacklogのWebインターフェースの使いやすさを向上させる統合Chrome拡張機能",
 
   "permissions": ["storage", "activeTab"],
@@ -13,7 +13,7 @@
       "matches": ["https://*.backlog.jp/*", "https://*.backlog.com/*"],
       "js": ["content.js"],
       "run_at": "document_end",
-      "all_frames": false
+      "all_frames": true
     }
   ],
 
