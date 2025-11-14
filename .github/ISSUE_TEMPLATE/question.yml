@@ -1,0 +1,148 @@
+name: 質問・サポート / Question & Support
+description: 拡張機能の使い方や設定に関する質問がある場合にご利用ください / Use this for questions about extension usage or configuration
+title: "[Question] "
+labels: ["question"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご質問をありがとうございます。可能な限りサポートいたします。
+        まず[よくある質問 / FAQ](https://github.com/IsodaZen/backlog-usability-enhance-dist#-よくある質問--faq)もご確認ください。
+        
+        Thank you for your question. We'll do our best to support you.
+        Please also check our [FAQ](https://github.com/IsodaZen/backlog-usability-enhance-dist#-よくある質問--faq) first.
+
+  - type: dropdown
+    id: question_category
+    attributes:
+      label: 質問の種類 / Question Category
+      description: どのような質問かを選択してください / Select what type of question this is
+      options:
+        - "インストール・設定方法 / Installation & Setup"
+        - "機能の使い方 / How to use features"
+        - "設定の変更方法 / How to change settings"
+        - "トラブルシューティング / Troubleshooting"
+        - "対応環境・制限事項 / Supported environments & limitations"
+        - "その他の質問 / Other questions"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question_detail
+    attributes:
+      label: 質問内容 / Question Details
+      description: 具体的な質問内容を記載してください / Please provide specific details about your question
+      placeholder: |
+        例：ボードアコーディオン機能を有効にしたが、列の折りたたみができません。正しい操作方法を教えてください。
+        Example: I enabled the board accordion feature, but I can't collapse columns. Please tell me the correct operation method.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target_feature
+    attributes:
+      label: 関連する機能 / Related Feature
+      description: 質問に関連する機能を選択してください / Select the feature related to your question
+      options:
+        - "ボードアコーディオン機能 / Board Accordion Feature"
+        - "ショートカットキー表示機能 / Shortcut Key Display Feature"
+        - "課題Pending機能 / Issue Pending Feature"
+        - "設定画面全般 / Settings Screen General"
+        - "インストール・初期設定 / Installation & Initial Setup"
+        - "拡張機能全般 / Extension General"
+        - "その他 / Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_situation
+    attributes:
+      label: 現在の状況 / Current Situation
+      description: 現在どのような状況か、何を試したかを説明してください / Describe your current situation and what you've tried
+      placeholder: |
+        例：
+        - 拡張機能はインストール済み
+        - 設定画面でボードアコーディオン機能を有効化
+        - Backlogのボード画面でステータス列のヘッダーをクリックしたが反応しない
+        - ページの再読み込みも試したが変化なし
+        
+        Example:
+        - Extension is installed
+        - Enabled board accordion feature in settings
+        - Clicked status column headers on Backlog board screen but no response
+        - Tried page reload but no change
+    validations:
+      required: true
+
+  - type: input
+    id: chrome_version
+    attributes:
+      label: Chromeバージョン / Chrome Version
+      description: chrome://version/ で確認できます / You can check at chrome://version/
+      placeholder: "例 / Example: 122.0.6261.111"
+    validations:
+      required: false
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: 拡張機能バージョン / Extension Version
+      description: chrome://extensions/ の詳細画面で確認できます / You can check in chrome://extensions/ details
+      placeholder: "例 / Example: 1.2.0"
+    validations:
+      required: false
+
+  - type: input
+    id: backlog_url
+    attributes:
+      label: BacklogのURL / Backlog URL
+      description: 質問に関連するBacklogサイトのURL（プライベート情報は除く） / URL of Backlog site related to your question (excluding private info)
+      placeholder: "例 / Example: https://your-space.backlog.jp (スペース名は実際のものに置き換えてください / Replace space name with actual)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット / Screenshots
+      description: 問題の理解に役立つスクリーンショットがあれば貼り付けてください / Please attach screenshots if they help understand the issue
+      placeholder: |
+        スクリーンショットをドラッグアンドドロップまたは貼り付けてください
+        Drag and drop or paste screenshots here
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: 期待する結果 / Expected Result
+      description: どのような結果を期待しているかを説明してください / Describe what result you expect
+      placeholder: |
+        例：ステータス列のヘッダーをクリックすると、その列が折りたたまれて非表示になる
+        Example: When clicking status column header, that column should collapse and become hidden
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 確認事項 / Checklist
+      description: 以下の項目を確認してください / Please check the following items
+      options:
+        - label: READMEのよくある質問を確認した / Checked FAQ in README
+          required: true
+        - label: 対応サイト（*.backlog.jp, *.backlog.com）でアクセスしている / Accessing supported sites (*.backlog.jp, *.backlog.com)
+          required: false
+        - label: 拡張機能が有効になっている / Extension is enabled
+          required: false
+        - label: ページの再読み込みを試した / Tried reloading the page
+          required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: 追加情報 / Additional Information
+      description: その他、質問に関連する情報があれば記載してください / Any other information related to your question
+      placeholder: |
+        - 以前は正常に動作していた / Previously worked correctly
+        - 特定のページでのみ発生 / Only occurs on specific pages
+        - 他の拡張機能との競合の可能性 / Possible conflicts with other extensions
