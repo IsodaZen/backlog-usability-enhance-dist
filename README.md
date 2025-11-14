@@ -29,59 +29,33 @@ A Chrome extension that enhances the usability of Backlog web interface.
 
 Alternatively, you can access settings by clicking the extension icon in the popup.
 
-## 🚀 機能と使用方法 / Features & Usage
+## 🚀 機能 / Features
 
-### 📋 ボードアコーディオン機能 / Board Accordion Feature
-**概要：** ステータス列の個別折りたたみ/展開で、作業中の列だけに集中できます
+各機能の詳細な説明は [features.md](docs/features.md) をご覧ください。
 
-**Overview:** Individual collapse/expand of status columns to focus only on working columns
+For detailed information about each feature, please see [features.en.md](docs/features.en.md).
 
-**使い方 / Usage:**
-- ステータス列のヘッダーをクリックして折りたたみ/展開 / Click status column headers to collapse/expand
-- キーボードショートカット / Keyboard shortcuts：
-  - `Ctrl+Shift+E`: 全列展開 / Expand all columns
-  - `Ctrl+Shift+C`: 全列折りたたみ / Collapse all columns
-- 状態はページリロード後も保持されます / States are preserved after page reload
+### 機能一覧 / Feature List
 
-### ⌨️ ショートカットキー表示機能 / Shortcut Key Display Feature
-**概要：** Backlog標準ショートカットキーが視覚的に表示され、キーボード操作が効率化されます
+- **📋 [ボードアコーディオン機能](docs/features.md#ボードアコーディオン機能) / [Board Accordion Feature](docs/features.en.md#board-accordion-feature)**
+  ステータス列の個別折りたたみ/展開で、作業中の列だけに集中できます
+  Individual collapse/expand of status columns to focus only on working columns
 
-**Overview:** Backlog standard shortcut keys are visually displayed to improve keyboard operation efficiency
+- **⌨️ [ショートカットキー表示機能](docs/features.md#ショートカットキー表示機能) / [Shortcut Key Display Feature](docs/features.en.md#shortcut-key-display-feature)**
+  Backlog標準ショートカットキーが視覚的に表示され、キーボード操作が効率化されます
+  Backlog standard shortcut keys are visually displayed to improve keyboard operation efficiency
 
-**使い方 / Usage:**
-- Backlog画面でナビゲーション項目にショートカットキーが自動表示 / Shortcut keys automatically displayed on navigation items in Backlog
-- ツールチップでキーの説明も確認可能 / Key descriptions available via tooltips
-- 設定画面で表示/非表示を切り替え / Toggle display on/off in settings
+- **⏸️ [課題Pending機能](docs/features.md#課題pending機能) / [Issue Pending Feature](docs/features.en.md#issue-pending-feature)**
+  ボード上で課題を一時保留状態にして、優先度の管理ができます
+  Temporarily hold issues on the board for priority management
 
-### ⏸️ 課題Pending機能 / Issue Pending Feature
-**概要：** ボード上で課題を一時保留状態にして、優先度の管理ができます
+- **📝 [プルリクエストフォーマット自動挿入機能](docs/features.md#プルリクエストフォーマット自動挿入機能) / [PR Format Auto-Insert Feature](docs/features.en.md#pr-format-auto-insert-feature)**
+  プルリクエスト作成時にプロジェクト別のテンプレートを自動挿入して、統一されたフォーマットで効率的に作成できます
+  Automatically insert project-specific templates when creating pull requests for efficient and consistent formatting
 
-**Overview:** Temporarily hold issues on the board for priority management
-
-**使い方 / Usage:**
-- 課題カードをクリックしてPending状態を切り替え / Click issue cards to toggle Pending state
-- Pending状態の課題は色分け・アイコンで視覚的に区別 / Pending issues are visually distinguished with colors and icons
-- 完了した課題のPending状態は自動解除（設定で変更可能） / Completed issues automatically clear Pending state (configurable)
-
-### 📝 プルリクエストフォーマット自動挿入機能 / PR Format Auto-Insert Feature
-**概要：** プルリクエスト作成時にプロジェクト別のテンプレートを自動挿入して、統一されたフォーマットで効率的に作成できます
-
-**Overview:** Automatically insert project-specific templates when creating pull requests for efficient and consistent formatting
-
-**使い方 / Usage:**
-- 設定画面でプロジェクト別テンプレートを編集・管理 / Edit and manage project-specific templates in settings
-- プルリクエスト作成画面でプロジェクト別テンプレートを自動挿入 / Automatically insert project-specific templates on pull request creation pages
-
-### 🔗 課題コメントURLコピー機能 / Issue Comment URL Copy Feature
-**概要：** 課題やプルリクエストの各コメントにURLコピーボタンを追加し、ワンクリックでコメントの直リンクをクリップボードにコピーできます
-
-**Overview:** Add URL copy buttons to each comment on issues and pull requests, allowing you to copy direct links to comments with one click
-
-**使い方 / Usage:**
-- 課題詳細ページやプルリクエストページの各コメントにコピーボタンが表示 / Copy buttons appear on each comment in issue detail and pull request pages
-- ボタンをクリックするとコメントの直リンクURLがクリップボードにコピー / Click the button to copy the direct link URL to the clipboard
-- iframe内モーダル（`dialogMode=true`）でも利用可能 / Also available in iframe modals (`dialogMode=true`)
-- MutationObserverにより新規コメントを自動検知 / Automatically detects new comments via MutationObserver
+- **🔗 [課題コメントURLコピー機能](docs/features.md#課題コメントurlコピー機能) / [Issue Comment URL Copy Feature](docs/features.en.md#issue-comment-url-copy-feature)**
+  課題やプルリクエストの各コメントにURLコピーボタンを追加し、ワンクリックでコメントの直リンクをクリップボードにコピーできます
+  Add URL copy buttons to each comment on issues and pull requests, allowing you to copy direct links to comments with one click
 
 ## 🐛 問題の報告 / Bug Reports
 

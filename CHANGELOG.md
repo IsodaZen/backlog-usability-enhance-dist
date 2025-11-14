@@ -7,16 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # Changelog
 
 
+## [0.3.1] - 2025-11-15
+
+### Fixed
+- 遅延読み込みされたコメントにURLコピーボタンが付与されない
+- ダッシュボード画面でショートカットキー表示機能がエラー
+- .github/ディレクトリがbacklog-usability-enhance-distにデプロイされていない
+
+### Documentation
+- ドキュメント構成を改善し、機能詳細を`docs/features.md`に集約
+- `README.md`を機能一覧とリンクのみに簡略化し、見通しを向上
+
 ## [0.3.0] - 2025-11-11
 
 ### Added
 - **課題コメントURLコピー機能** - 課題詳細ページとプルリクエストページの各コメントにURLコピーボタンを追加
-  - ワンクリックでコメントの直リンクURLをクリップボードにコピー
-  - iframe内モーダル（`dialogMode=true`）でのコメントURLコピー対応
-  - キーボードショートカット（Ctrl+Enter/Cmd+Enter）でのコメント登録監視
-  - MutationObserverによる新規コメント自動検知
-  - 設定画面での機能有効/無効切り替え
-  - Backlog標準SVGアイコンを使用した統一感のあるデザイン
 
 ### Technical
 - 包括的なユニットテスト（76テストケース）実装

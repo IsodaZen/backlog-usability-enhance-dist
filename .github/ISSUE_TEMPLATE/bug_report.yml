@@ -1,0 +1,122 @@
+name: バグ報告 / Bug Report
+description: 拡張機能の動作に問題がある場合にご利用ください / Use this when there are issues with extension functionality
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告をありがとうございます。問題の解決のため、以下の情報をできるだけ詳しく記載してください。
+        
+        Thank you for reporting a bug. Please provide as much detail as possible to help us resolve the issue.
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: 問題の説明 / Problem Description
+      description: 何が起こっているかを詳しく説明してください / Describe what is happening in detail
+      placeholder: |
+        例：ボードアコーディオン機能で列を折りたたんだ後、ページをリロードすると設定が保存されていない
+        Example: After collapsing columns with board accordion feature, settings are not saved after page reload
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 期待される動作 / Expected Behavior
+      description: 正常に動作した場合、どうなるべきかを説明してください / Describe what should happen when working correctly
+      placeholder: |
+        例：列の折りたたみ状態がページリロード後も保持されるべき
+        Example: Column collapse state should be preserved after page reload
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: 再現手順 / Steps to Reproduce
+      description: 問題を再現するための詳細な手順を記載してください / Provide detailed steps to reproduce the issue
+      placeholder: |
+        1. Backlogのボード画面を開く / Open Backlog board view
+        2. ステータス列のヘッダーをクリックして折りたたむ / Click status column header to collapse
+        3. ページをリロード（F5キー）する / Reload page (F5 key)
+        4. 列が展開された状態に戻ってしまう / Column returns to expanded state
+    validations:
+      required: true
+
+  - type: input
+    id: chrome_version
+    attributes:
+      label: Chromeバージョン / Chrome Version
+      description: chrome://version/ で確認できます / You can check at chrome://version/
+      placeholder: "例 / Example: 122.0.6261.111"
+    validations:
+      required: true
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: 拡張機能バージョン / Extension Version
+      description: chrome://extensions/ の詳細画面で確認できます / You can check in chrome://extensions/ details
+      placeholder: "例 / Example: 1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: backlog_url
+    attributes:
+      label: BacklogのURL / Backlog URL
+      description: 問題が発生したBacklogサイトのURL（プライベート情報は除く） / URL of Backlog site where issue occurred (excluding private info)
+      placeholder: "例 / Example: https://your-space.backlog.jp (スペース名は実際のものに置き換えてください / Replace space name with actual)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_feature
+    attributes:
+      label: 影響を受ける機能 / Affected Feature
+      description: 問題が発生している機能を選択してください / Select the feature where the issue occurs
+      options:
+        - "ボードアコーディオン機能 / Board Accordion Feature"
+        - "ショートカットキー表示機能 / Shortcut Key Display Feature"
+        - "課題Pending機能 / Issue Pending Feature"
+        - "設定画面 / Settings Screen"
+        - "その他 / Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_message
+    attributes:
+      label: エラーメッセージ / Error Messages
+      description: エラーメッセージやコンソールエラーがあれば記載してください / Include any error messages or console errors if available
+      placeholder: |
+        F12キーを押してデベロッパーツールを開き、Consoleタブでエラーを確認してください
+        Press F12 to open developer tools and check for errors in Console tab
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 追加情報 / Additional Context
+      description: その他、問題解決に役立つ情報があれば記載してください / Any other information that might help resolve the issue
+      placeholder: |
+        - 他の拡張機能との競合の可能性 / Possible conflicts with other extensions
+        - 特定の操作パターンでのみ発生 / Only occurs with specific operation patterns
+        - スクリーンショット / Screenshots
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 確認事項 / Checklist
+      description: 以下の項目を確認してください / Please check the following items
+      options:
+        - label: 対応サイト（*.backlog.jp, *.backlog.com）でアクセスしている / Accessing supported sites (*.backlog.jp, *.backlog.com)
+          required: true
+        - label: 拡張機能が有効になっている / Extension is enabled
+          required: true
+        - label: ページの再読み込みを試した / Tried reloading the page
+          required: true
+        - label: 他の拡張機能を無効にして試した / Tried with other extensions disabled
+          required: false
