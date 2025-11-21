@@ -80,6 +80,7 @@ body:
         - "ボードアコーディオン機能 / Board Accordion Feature"
         - "ショートカットキー表示機能 / Shortcut Key Display Feature"
         - "課題Pending機能 / Issue Pending Feature"
+        - "課題コメントURLコピー機能 / Comment URL Copy Feature"
         - "設定画面 / Settings Screen"
         - "新機能 / New feature"
         - "その他 / Other"

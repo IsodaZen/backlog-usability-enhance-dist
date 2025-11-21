@@ -48,6 +48,7 @@ body:
         - "ボードアコーディオン機能 / Board Accordion Feature"
         - "ショートカットキー表示機能 / Shortcut Key Display Feature"
         - "課題Pending機能 / Issue Pending Feature"
+        - "課題コメントURLコピー機能 / Comment URL Copy Feature"
         - "設定画面全般 / Settings Screen General"
         - "インストール・初期設定 / Installation & Initial Setup"
         - "拡張機能全般 / Extension General"

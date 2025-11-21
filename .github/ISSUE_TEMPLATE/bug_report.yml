@@ -31,7 +31,7 @@ body:
         例：列の折りたたみ状態がページリロード後も保持されるべき
         Example: Column collapse state should be preserved after page reload
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: reproduction_steps
@@ -53,7 +53,7 @@ body:
       description: chrome://version/ で確認できます / You can check at chrome://version/
       placeholder: "例 / Example: 122.0.6261.111"
     validations:
-      required: true
+      required: false
 
   - type: input
     id: extension_version
@@ -61,15 +61,6 @@ body:
       label: 拡張機能バージョン / Extension Version
       description: chrome://extensions/ の詳細画面で確認できます / You can check in chrome://extensions/ details
       placeholder: "例 / Example: 1.2.0"
-    validations:
-      required: true
-
-  - type: input
-    id: backlog_url
-    attributes:
-      label: BacklogのURL / Backlog URL
-      description: 問題が発生したBacklogサイトのURL（プライベート情報は除く） / URL of Backlog site where issue occurred (excluding private info)
-      placeholder: "例 / Example: https://your-space.backlog.jp (スペース名は実際のものに置き換えてください / Replace space name with actual)"
     validations:
       required: true
 
@@ -82,6 +73,7 @@ body:
         - "ボードアコーディオン機能 / Board Accordion Feature"
         - "ショートカットキー表示機能 / Shortcut Key Display Feature"
         - "課題Pending機能 / Issue Pending Feature"
+        - "課題コメントURLコピー機能 / Comment URL Copy Feature"
         - "設定画面 / Settings Screen"
         - "その他 / Other"
     validations:
@@ -113,10 +105,10 @@ body:
       description: 以下の項目を確認してください / Please check the following items
       options:
         - label: 対応サイト（*.backlog.jp, *.backlog.com）でアクセスしている / Accessing supported sites (*.backlog.jp, *.backlog.com)
-          required: true
+          required: false
         - label: 拡張機能が有効になっている / Extension is enabled
-          required: true
+          required: false
         - label: ページの再読み込みを試した / Tried reloading the page
-          required: true
+          required: false
         - label: 他の拡張機能を無効にして試した / Tried with other extensions disabled
           required: false

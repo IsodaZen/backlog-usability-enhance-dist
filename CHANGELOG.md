@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 # Changelog
 
 
+## [0.3.2] - 2025-11-21
+
+### Fixed
+- PRフォーマット自動挿入機能で、テンプレート変更後に保存するとテンプレートで上書きされる不具合を修正
+
+### Improved
+- ログシステムの統一とデフォルトログレベル継承の実装
+
+### Documentation
+- READMEのディレクトリ構成を最新の状態に更新
+- Issueテンプレートの改善
+
 ## [0.3.1] - 2025-11-15
 
 ### Fixed
